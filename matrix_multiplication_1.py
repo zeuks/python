@@ -5,17 +5,6 @@ A = [[3,4,5],
 B = [[2,4,8],
     [9,7,8],
     [6,5,10]]
-'''
-print (len(A))
-print (len(B[0]))
-
-for a in range(3):
-    for b in range(3):
-        TempSum = 0
-        for c in range(3):
-            TempSum += A[a][c] * B[c][b]
-        C[a].append(TempSum)
-'''
 
 def matrix_multiplication (A, B):
     C = [[] for _ in range(len(A))]
