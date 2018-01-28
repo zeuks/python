@@ -1,7 +1,7 @@
 import numpy as np
 
-a_col, a_row = [int(x) for x in input("Enter the list A (column,row): ").split(',')]
-b_col, b_row = [int(x) for x in input("Enter the list B (column,row): ").split(',')]
+a_col, a_row = [int(n) for n in input("Enter the list A (column,row): ").split(',')]
+b_col, b_row = [int(n) for n in input("Enter the list B (column,row): ").split(',')]
 
 np.random.seed(1)
 
@@ -9,6 +9,7 @@ a = np.random.randn(a_col*a_row).reshape(a_col,a_row)
 b = np.random.randn(b_col*b_row).reshape(b_col,b_row)
 
 C = [[] for _ in range(a_col)]
+correct_C = a.dot(b)
 
 def matrix_multiplication (A, B):
     for a in range(len(A)): # loops through number of rows
@@ -20,3 +21,7 @@ def matrix_multiplication (A, B):
     return (C)
 
 print (matrix_multiplication(a,b))
+print ("Result (column,row): %s, %s" % (len(C), len(C[0])))
+
+print(C[5][3])
+print(correct_C[5][3]) # checks if the two lists are the same
