@@ -3,11 +3,18 @@ import numpy as np
 a_col, a_row = [int(n) for n in input("Enter the list A (column,row): ").split(',')]
 b_col, b_row = [int(n) for n in input("Enter the list B (column,row): ").split(',')]
 
-np.random.seed(1)
+while True:
+    if a_row != b_col:
+        print ("Error. Please input again.")
+        a_col, a_row = [int(n) for n in input("Enter the list A (column,row): ").split(',')]
+        b_col, b_row = [int(n) for n in input("Enter the list B (column,row): ").split(',')]
+    else:
+        np.random.seed(1)
+        a = np.random.randn(a_col*a_row).reshape(a_col,a_row)
+        b = np.random.randn(b_col*b_row).reshape(b_col,b_row)
+        break
 
-a = np.random.randn(a_col*a_row).reshape(a_col,a_row)
-b = np.random.randn(b_col*b_row).reshape(b_col,b_row)
-
+#result lists
 C = [[] for _ in range(a_col)]
 correct_C = a.dot(b)
 
