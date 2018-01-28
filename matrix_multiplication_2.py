@@ -1,7 +1,7 @@
 import numpy as np
 
-a_col, a_row = [int(x) for x in input("Enter the list A column,row: ").split(',')]
-b_col, b_row = [int(x) for x in input("Enter the list B column,row: ").split(',')]
+a_col, a_row = [int(x) for x in input("Enter the list A (column,row): ").split(',')]
+b_col, b_row = [int(x) for x in input("Enter the list B (column,row): ").split(',')]
 
 np.random.seed(1)
 
