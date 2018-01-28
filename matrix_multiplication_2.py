@@ -30,5 +30,6 @@ def matrix_multiplication (A, B):
 print (matrix_multiplication(a,b))
 print ("Result (column,row): %s, %s" % (len(C), len(C[0])))
 
+# checks if the two lists are the same
 print(C[5][3])
-print(correct_C[5][3]) # checks if the two lists are the same
+print(correct_C[5][3])
