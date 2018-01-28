@@ -14,6 +14,8 @@ while True:
         b = np.random.randn(b_col*b_row).reshape(b_col,b_row)
         break
 
+print("\n")
+print("Loading... Please wait.")
 #result lists
 C = [[] for _ in range(a_col)]
 correct_C = a.dot(b)
@@ -27,9 +29,14 @@ def matrix_multiplication (A, B):
             C[a].append(TempSum) # appends TempSum to the correct spot
     return (C)
 
-print (matrix_multiplication(a,b))
+print ("\n")
+print ("Result: \n %s" % (matrix_multiplication(a,b)))
+print ("\n")
 print ("Result (column,row): %s, %s" % (len(C), len(C[0])))
+print ("\n")
 
 # checks if the two lists are the same
-print(C[5][3])
-print(correct_C[5][3])
+print ("Checking if the answer is correct:")
+print(C[2][3])
+print(correct_C[2][3])
+print ("\n")
