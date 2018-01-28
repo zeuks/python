@@ -17,7 +17,7 @@ while True:
 print("\n")
 print("Loading... Please wait.")
 #result lists
-C = [[] for _ in range(a_col)]
+C = [[] for x in range(a_col)]
 correct_C = a.dot(b)
 
 def matrix_multiplication (A, B):
